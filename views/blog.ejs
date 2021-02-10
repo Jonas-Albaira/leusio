@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+
+ <header>
+    <% include partials/menu %>
+        <div id="fullpage">
+    <section class="section first">
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-8 mx-auto">
+           <h1 class="text-center">Technology led brand transformation, inspired by culture, driven by insights.</h1>
+         </div>
+        </div>
+      </div>
+    </section>
+    <section class="section fourth">
+      <div class="container-fluid">
+      <div class="row row-eq-height">
+  
+        <% if (document.length > 0) {%>
+          <% document.slice(-3).forEach((document, index) => { %>
+          <div class="col-sm-4 article py-5 px-3">
+              <div class="project-header">
+                  <img class="project-featured" src="<%=(document.data.image.url) %>"/>
+                  <div class="project-date-latest">
+                    
+                  </div>
+                  <div class="project-title-latest underline">
+                      <a href="/article/<%= (document.uid) ?  document.uid  : '' %>"><%= PrismicDOM.RichText.asText(document.data.title) %></a>
+                  </div>
+                  <div class="category-featured">
+                    <p><%= PrismicDOM.RichText.asText(document.data.category) %></p>
+                  </div> 
+                  <div class="category-desc ">
+                    <p><%= PrismicDOM.RichText.asText(document.data.description) %></p>
+                  </div> 
+                  <div class='pp-button-read-more mt-5' style='z-index:39999;'>
+                    <a href="/article/<%= (document.uid) ?  document.uid  : '' %>">Read Article</a>
+                  </div>
+                </div> 
+          </div>
+          <% }) %>
+        <% } %>  
+      
+    </div>
+      </div><!--end of container-->
+    </section>
+     </div>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script>
+
+    window.sr = new ScrollReveal({ duration: 2000 });
+    sr.reveal('.reveal');
+    
+    function hover(element) {
+       // var src_dest = document.getElementById(element).src;
+       var dest = element.getAttribute("src");
+       var dest_id = element.id;
+       var new_id = dest_id + "-hover.svg";
+       // var new_dest = dest.replace()
+       var temp = "https://s3.amazonaws.com/jonas-personal-portfolio/";
+
+       var new_dest = temp + new_id;
+       element.setAttribute('src',new_dest);
+       //alert(new_dest);
+
+    }
+    
+    function unhover(element) {
+        
+        var dest_orig = element.getAttribute("src");
+        var dest_id = element.id;
+        var new_id = dest_id + ".svg";
+        var temp = "https://s3.amazonaws.com/jonas-personal-portfolio/";
+        var new_dest = temp + new_id;
+        element.setAttribute('src',new_dest);
+        //element.setAttribute('src', dest_orig);
+    } 
+    
+
+    
+</script>
+    </body>
+<% include partials/script %>
+    <script>
+new fullpage('#fullpage', {
+	//options here
+    licenseKey:'5256FF70-2D4F4E0A-8CA292CD-ED744BD8',
+    navigation: true,
+	autoScrolling:true,
+	scrollHorizontally: true,
+    sectionsColor:["#fff",'#fff'],
+    easing: 'easeInOutCubic',
+	easingcss3: 'ease',
+    scrollOverflow:'true'
+});
+    fullpage_api.reBuild();
+fullpage_api.setAllowScrolling(true);
+eva.replace({
+  animation: {
+    type: 'string', // zoom, pulse, shake, flip
+    hover: 'boolean', // default true
+    infinite: 'boolean', // default false
+  }
+});
+    new WOW().init();
+      
+</script>
+</html>

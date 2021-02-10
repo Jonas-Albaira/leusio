@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Points & Pixels | <%= page %></title>
+        <meta charset="utf-8">
+        <meta name="active-menu" content="<%= menuId %>">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="http://s3.amazonaws.com/jonas-personal-portfolio/logo-icon-01.png" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image:secure_url" content="https://s3.amazonaws.com/jonas-personal-portfolio/logo-icon-01.png" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image:type" content="image/png" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image:width" content="1220" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image:height" content="1220" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image:alt" content="Make Every Pixels Count" />
+        <link rel="icon" href="/public/images/favicon.ico">
+        <link rel="stylesheet" href="\stylesheets\style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/tms7fjm.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.typekit.net/ggt4lqm.css">
+        <style>
+            .project-featured-body {
+                padding-top:50px;
+                padding-bottom: 50px;
+            }
+            .title-featured-body {
+                font-size: 56pt;
+            }
+            .category-featured-body {
+                font-size:36pt;
+            }
+        </style>
+</head>
+<body>
+<header>
+    <% include partials/menu.ejs %>
+</header>
+          <div class="row top-buffer">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="category-featured-body " id="cat-feat">
+                    <%- PrismicDOM.RichText.asHtml(document.data.category) %>
+              </div>   
+              <div class="title-featured-body "> 
+                <%= PrismicDOM.RichText.asText(document.data.title) %>
+              </div>
+              <img class="project-featured-body" src="<%= document.data.image.url %>"/>
+            </div>
+            <div class="row top-buffer">
+              <div class="col-md-2"></div>
+              <div class="col-md-8" style="padding-top:0px!important;">
+                  <span class="article-body"><%- PrismicDOM.RichText.asHtml(document.data.description) %></span>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+
+<!-- SPOTIFY PLAYLIST -->
+<% include  partials/script.ejs %>
+</body>
+
+</html>

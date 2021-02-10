@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <style>
+        nav.j-nav-bar li a{
+    color:#000!important;
+    letter-spacing: 1px;
+    font-size: 16px;
+    text-transform: uppercase;
+   padding-top:17px!important;
+    font-weight: 300;
+}
+        
+        .navbar-brand {
+            margin-top:-10px;
+        }
+        
+        header {
+            display:none;
+        }
+        
+        p.desc {
+            color:#333E48;line-height:1.5em;
+           
+            font-size:24px;
+            
+        }
+        
+        p.desc.main {
+            font-weight:700;
+        }
+        
+        h3{
+            margin-bottom:0px;
+        }
+        
+        img.demo {
+                -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+        }
+   
+    </style>
+</head>
+<body>
+ <% include partials/dark-menu %>
+   <div class="row section-3-work" style="background-color:#2e5d9f;">
+         <div class="col-sm-4"></div>
+        <div class="col-sm-4 text-center">
+            <div class="project">
+                <img src="https://s3.amazonaws.com/jonas-personal-portfolio/yeahdatsme-landing-03.svg" class="demo"/>
+                <p class="work-title">Scheduling Application</p>
+                <p class="work-sub">Fullstack Cloud Application</p>
+                <p style="margin-bottom:50px;">
+                   A 100% cloud-based application that allows you to schedule things so you won’t forget about them. It’s a simple and straightforward system that is perfect for people who use their internet browser for reminders. Extremely intuitive, easy to use, 100% responsive and fast loading. 
+                </p>
+               
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    
+    <div class="row text-center demo" >
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3 align-middle" ><p class="desc main" >Sync with Google Calendar</p><p class="desc">Super smooth scheduling system</p></div>
+        <div class="col-sm-3"><img style="width:100%;" src="https://s3.amazonaws.com/jonas-personal-portfolio/gc-sync.gif"  class="demo"/></div>
+        <div class="col-sm-3"></div>
+    </div>
+     <div class="row text-center" >
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3"><img style="width:100%;" src="https://s3.amazonaws.com/jonas-personal-portfolio/add-event.gif"  class="demo"/></div>
+        <div class="col-sm-3"><p class="desc main">Add Individual Events</p><p class="desc">Simple interface</p></div>
+        <div class="col-sm-3"></div>
+    </div>
+   <div class="row text-center" >
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3 align-middle"><p class="desc main">Check-off Past Events</p><p class="desc">Scheduled data is not erased when you leave the site</p></div>
+        <div class="col-sm-3"><img style="width:100%;" src="https://s3.amazonaws.com/jonas-personal-portfolio/gc-mark.gif"  class="demo"/></div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row " >
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6"><h3>Finding the best possible solutions for a hectic world is essential for success. </h3><p class="desc">Cloud based development with fast and reliable solutions are the main components of modern web design. Yeahdats.me is an excellent way for people to keep a quick schedule of their activities. No need for fancy schedulers and expensive software, this browser-based solution is what time management is all about.</p>
+        <p><a href="http://yeahdats.me" class="cta-link">Try Demo</a></p>
+        </div>
+        
+        <div class="col-sm-3"></div>
+    </div>
+    <% include partials/footer %>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+    window.sr = new ScrollReveal({ duration: 2000 });
+    sr.reveal('.reveal');
+    
+    function logo() {
+    document.getElementByID("main-logo").src='https://s3.amazonaws.com/jonas-personal-portfolio/logo-full.svg';
+        alert("hello");
+    }
+
+    
+    function hover(element) {
+       // var src_dest = document.getElementById(element).src;
+       var dest = element.getAttribute("src");
+       var dest_id = element.id;
+       var new_id = dest_id + "-hover.svg";
+       // var new_dest = dest.replace()
+       var temp = "https://s3.amazonaws.com/jonas-personal-portfolio/";
+
+       var new_dest = temp + new_id;
+       element.setAttribute('src',new_dest);
+       //alert(new_dest);
+
+    }
+    
+    function unhover(element) {
+        
+        var dest_orig = element.getAttribute("src");
+        var dest_id = element.id;
+        var new_id = dest_id + ".svg";
+        var temp = "https://s3.amazonaws.com/jonas-personal-portfolio/";
+        var new_dest = temp + new_id;
+        element.setAttribute('src',new_dest);
+        //element.setAttribute('src', dest_orig);
+    } 
+    
+</script>
+</body>
+<% include partials/script %>
+</html>

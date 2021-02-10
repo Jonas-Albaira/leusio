@@ -1,0 +1,219 @@
+#myNav{
+    display: none;
+    background-color: #1b1d1e;
+    z-index: 10000;
+    position: absolute;
+  transition: visibility 0s 0.6s;
+}
+#menu-button {
+     z-index: 11000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#main-menu li{
+    list-style: none;
+}
+#main-menu li a{
+    color:#fff;
+    font-size: 2em;
+}
+
+body * {
+    font-family: GT Walsheim Pro;
+}
+
+
+#my-embedded-typeform{
+    height: 400px;
+}
+
+
+
+.category-desc{
+    max-height: 200px;
+}
+/*Blog cards*/
+.project-title-latest a{
+    color: #434343;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.project-featured{
+    
+}
+.project-title-latest{
+    
+}
+.category-featured{
+    
+}
+.category-desc p{
+    font-weight: 300;
+    font-family: "GT Walsheim Regular";
+}
+.pp-button-read-more{
+    
+}
+/* ========== SECTION 1 - content animation ========== */
+.section.first > .fp-tableCell h1 {
+	transform: translateY(-1000px);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .8s ease-in-out;
+}
+
+.section.first.active > .fp-tableCell h1 {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.section.first > .fp-tableCell p {
+	transform: translateX(100%);
+	opacity: 0;
+	transition: transform .8s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .8s ease-in-out;
+}
+
+.section.first > .fp-tableCell p + p {
+	transform: translateX(-100%);
+}
+
+.section.first > .fp-tableCell p + p + p {
+	transform: translateX(0) translateY(0);
+	transform: translateY(1000px);
+}
+
+.section.first.active > .fp-tableCell p {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.section.first.active > .fp-tableCell p {
+	transition-delay: .2s;
+}
+
+.section.first.active > .fp-tableCell p + p {
+	transition-delay: .4s;
+}
+
+.section.first.active > .fp-tableCell p + p + p {
+	transition-delay: .6s;
+}
+
+/* ========== SECTION 2 - content animation ========== */
+/* Slide 1 */
+.section.second .slide-one > .fp-tableCell h2,
+.section.second .slide-one > .fp-tableCell p {
+	transform: translateY(-1000px);
+	opacity: 0;
+	transition: transform .66s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .66s ease-in-out;
+}
+
+.section.second.active .slide-one.active > .fp-tableCell h2,
+.section.second.active .slide-one.active > .fp-tableCell p {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.section.second.active .slide-one.active > .fp-tableCell h2 {
+	transition-delay: .44s;
+}
+
+.section.second.active .slide-one.active > .fp-tableCell p {
+	transition-delay: .22s;
+}
+
+.section.second.active .slide-one.active > .fp-tableCell p + p {
+	transition-delay: 0s;
+}
+
+/* Slide 2 */
+.section.second .slide-two > .fp-tableCell h2,
+.section.second .slide-two > .fp-tableCell p {
+	transform: translateY(1000px);
+	opacity: 0;
+	transition: transform .66s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .66s ease-in-out;
+}
+
+.section.second.active .slide-two.active > .fp-tableCell h2,
+.section.second.active .slide-two.active > .fp-tableCell p {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.section.second.active .slide-two.active > .fp-tableCell p {
+	transition-delay: .22s;
+}
+
+.section.second.active .slide-two.active > .fp-tableCell p + p {
+	transition-delay: .44s;
+}
+
+/* Slide 3 */
+.section.second .slide-three > .fp-tableCell h2,
+.section.second .slide-three > .fp-tableCell p {
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: transform .66s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .66s ease-in-out;
+}
+
+.section.second.active .slide-three.active > .fp-tableCell h2,
+.section.second.active .slide-three.active > .fp-tableCell p {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.section.second.active .slide-three.active > .fp-tableCell p {
+	transition-delay: .22s;
+}
+
+.section.second.active .slide-three.active > .fp-tableCell p + p {
+	transition-delay: .44s;
+}
+
+/* Slide 4 */
+.section.second .slide-four > .fp-tableCell h2,
+.section.second .slide-four > .fp-tableCell p {
+	transform: translateX(100%);
+	opacity: 0;
+	transition: transform .66s cubic-bezier(0.16, 0.68, 0.43, 0.99),
+				opacity .66s ease-in-out;
+}
+
+.section.second.active .slide-four.active > .fp-tableCell h2,
+.section.second.active .slide-four.active > .fp-tableCell p {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+.section.second.active .slide-four.active > .fp-tableCell p {
+	transition-delay: .22s;
+}
+
+.section.second.active .slide-four.active > .fp-tableCell p + p {
+	transition-delay: .44s;
+}
+
+/* ========== SECTION 3 - content animation ========== */
+.section.third > .fp-tableCell h2,
+.section.third > .fp-tableCell p {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.section.third.active > .fp-tableCell h2,
+.section.third.active > .fp-tableCell p {
+	opacity: 1;
+}
+
+.section.third.active > .fp-tableCell p {
+	transition-delay: .33s;
+}
+
+.section.third.active > .fp-tableCell p + p {
+	transition-delay: .66s;
+}

@@ -1,0 +1,28 @@
+{ Error: Unexpected status code [400] on URL https://pointsandpixelsblog.cdn.prismic.io/api/v2/documents/search?page=1&pageSize=20&ref=XIAEkxEAADNz3c-X&q=%5B%5Bat(my.page.uid%2C%20%22%5Cstylesheets%5Cstyle.css%22)%5D%5D
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 400 }
+{ Error: Unexpected status code [400] on URL https://pointsandpixelsblog.cdn.prismic.io/api/v2/documents/search?page=1&pageSize=20&ref=XIAEkxEAADNz3c-X&q=%5B%5Bat(my.page.uid%2C%20%22%5Cstylesheets%5Cstyle.css%22)%5D%5D
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 400 }
+{ Error: Unexpected status code [400] on URL https://pointsandpixelsblog.cdn.prismic.io/api/v2/documents/search?page=1&pageSize=20&ref=XIAEkxEAADNz3c-X&q=%5B%5Bat(my.page.uid%2C%20%22%5Cstylesheets%5Cstyle.css%22)%5D%5D
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 400 }
+{ Error: Unexpected status code [400] on URL https://pointsandpixelsblog.cdn.prismic.io/api/v2/documents/search?page=1&pageSize=20&ref=XIAEkxEAADNz3c-X&q=%5B%5Bat(my.page.uid%2C%20%22%5Cstylesheets%5Cstyle.css%22)%5D%5D
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 400 }
+{ Error: Unexpected status code [404] on URL https://pointsandpixelsblog.prismic.io/api/v2
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 404 }
+{ Error: Unexpected status code [503] on URL https://pointsandpixelsblog.prismic.io/api/v2
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 503 }
+{ Error: Unexpected status code [503] on URL https://pointsandpixelsblog.prismic.io/api/v2
+    at /root/node_modules/prismic-javascript/dist/prismic-javascript.min.js:1:15555
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) status: 503 }
