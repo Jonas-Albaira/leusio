@@ -38,8 +38,9 @@ var http = require('http');
 http.createServer(function (req, res) {
 	if (req.headers['x-forwarded-proto'] != 'https') {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-    res.end();
+   
 	}
+	 res.end();
 }).listen(process.env.PORT || 3000);
 
 /*app.use(function(req, res, next) {
