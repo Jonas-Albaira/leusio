@@ -54,7 +54,7 @@ http.createServer(function (req, res) {
 
 
 
-app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
+//app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 
 app.use(logger('dev'));
 app.use(express.json());
