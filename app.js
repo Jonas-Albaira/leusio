@@ -33,18 +33,12 @@ app.set('view engine', 'ejs');
 //app.listen(80);
 
 
-https.createServer({
-    ca:fs.readFileSync('./pointsandpixels_io.ca-bundle'),
-    key: fs.readFileSync('./pointsandpixels.io.key'),
-    cert: fs.readFileSync('./pointsandpixels_io.crt')
-}, app)
-.listen(443);
 
 var http = require('http');
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "http://" + req.headers['host'] + req.url });
     res.end();
-},app).listen(80);
+}).listen(80);
 
 
 
