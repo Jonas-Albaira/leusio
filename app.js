@@ -44,7 +44,7 @@ var http = require('http');
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "http://" + req.headers['host'] + req.url });
     res.end();
-},app).listen(80);
+}).listen(80);
 
 
 
