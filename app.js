@@ -40,7 +40,7 @@ http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
    
 	//}
-	 res.end();
+	// res.end();
 }).listen(process.env.PORT || 3000);
 
 /*app.use(function(req, res, next) {
