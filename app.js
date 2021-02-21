@@ -26,7 +26,7 @@ var favicon = require('serve-favicon');
 
 const app = express();
 
-var apiEndpoint = 'https://pointsandpixelsblog.prismic.io/api/v2';
+var apiEndpoint = 'http://pointsandpixelsblog.prismic.io/api/v2';
 
 
 // view engine setup
