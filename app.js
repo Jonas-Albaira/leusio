@@ -36,11 +36,20 @@ app.set('view engine', 'ejs');
 
 
 
-var http = require('http');
+/*var http = require('http');
 http.createServer(function (req, res) {
     res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
-}).listen(process.env.PORT || 3000);
+}).listen(process.env.PORT || 3000);*/
+
+app.use(function(req, res, next) {
+    if (req.headers['x-forwarded-proto'] != 'https') {
+        res.redirect('https://' + req.headers.host + req.path);
+    }
+    else {
+        return next();
+    }
+});
 
 
 
