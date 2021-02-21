@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var https = require('https');
+//var https = require('https');
 var fs = require('fs');
 var PrismicConfig = require('./prismic-configuration');
 var Prismic = require('prismic-javascript');
@@ -32,19 +32,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 //app.listen(80);
 
-
+/*
 https.createServer({
     ca:fs.readFileSync('./pointsandpixels_io.ca-bundle'),
     key: fs.readFileSync('./pointsandpixels.io.key'),
     cert: fs.readFileSync('./pointsandpixels_io.crt')
 }, app)
-.listen(443);
+.listen(443);*/
 
 var http = require('http');
 http.createServer(function (req, res) {
-    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+    res.writeHead(301, { "Location": "http://" + req.headers['host'] + req.url });
     res.end();
-}).listen(80);
+},app).listen(80);
 
 
 
