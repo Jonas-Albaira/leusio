@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var https = require('https');
+//var https = require('https');
 var fs = require('fs');
 var PrismicConfig = require('./prismic-configuration');
 var Prismic = require('prismic-javascript');
@@ -36,7 +36,7 @@ app.set('view engine', 'ejs');
 
 var http = require('http');
 http.createServer(function (req, res) {
-    res.writeHead(301, { "Location": "http://" + req.headers['host'] + req.url });
+    res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
     res.end();
 }).listen(process.env.PORT || 3000);
 
