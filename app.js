@@ -11,6 +11,8 @@ var PrismicDOM = require('prismic-dom');
 
 var router = express.Router();
 
+env = process.env.NODE_ENV || 'development';
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var blogRouter = require('./routes/blog');
