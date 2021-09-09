@@ -7,201 +7,217 @@
 <header>
     <% include partials/menu %>
 </header>
-<div class="container-fluid">
-    <!--section 1-->
-    <div class="row">
-      <div class="col-md-8 justify-content-center">
-         <p class="body-text">World-class outcomes for brands and people through design, content, user experience and technology. </p>
-      </div>
-    </div>
-    <!--section 1-->
-    <div class="row section-projects top-buffer section w-100 h-100">
-        <div class="row top-buffer">
-            <p class="section-header">Latest Project</p>
-        </div>
-        <div class="row top-buffer" style="padding-top:0px!important;padding-bottom:0px!important;">
-          <div class="col-sm-4 vertical-align">
-            <div class="project-header" >
-              <div class="project-date-latest">
-                Feb 2019
-              </div>
-              <div class="project-title-latest">
-                Imbue Spark
-              </div>
-              <div class="project-sub-latest">
-                Google APIs, Cloud Application
-              </div>
-              <div class="project-component-latest">
-                  NodeJS, Google Cloud Vision, Webhose.io, ES6
-              </div>  
-          </div>
-          </div>
-          <div class="col-sm-8">
-              <img class="project-featured" src="https://s3.amazonaws.com/jonas-personal-portfolio/images/pablo-downloading.svg"/>
-          </div>
-        </div>
-    </div>
-    </div>
-    <!--section 3-->
-    <div class="row section-articles top-buffer row-eq-height section">
-        <div class="row top-buffer">
-            <p class="section-header">Articles</p>
-        </div>
-  
-        <% if (document2.length > 0) {%>
-          <% document2.slice(-3).forEach((document2, index) => { %>
-          <div class="col-sm-4 article">
-              <div class="project-header">
-                  <img class="project-featured" src="<%=(document2.data.image.url) %>"/>
-                  <div class="project-date-latest">
-                    
-                  </div>
-                  <div class="project-title-latest underline">
-                      <a href="/article/<%= (document2.uid) ?  document2.uid  : '' %>"><%= PrismicDOM.RichText.asText(document2.data.title) %></a>
-                  </div>
-                  <div class="category-featured">
-                    <p><%= PrismicDOM.RichText.asText(document2.data.category) %></p>
-                  </div> 
-                </div> 
-          </div>
-          <% }) %>
-        <% } %>  
-      
-    </div>
-  <!--section 4-->
-    <div class="row ">
-      <div class="col-md-6 contact half section">
-          <div class="row top-buffer" >
-              <p class="section-header">Let's have a chat</p>
-          </div>
-          <div class="col-md-3 ">
-          </div>
-          <div class="col-md-6 ">
-          <form id="contact-form" method="post" action="contact.php" role="form">
-              <div class="messages"></div>
-              <div class="controls">
-                  <div class="row contact-row">
-                    <div class="col-md-12">
-                      <p class="contact-header">I'd love to connect with you.</p>
-                    </div>
-                  </div>
-                  <div class="row contact-row">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="form_name">First Name</label>
-                              <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Firstname is required.">
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="form_lastname">Last Name</label>
-                              <input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Lastname is required.">
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row contact-row">
-                      <div class="col-md-12">
-                          <div class="form-group">
-                              <label for="form_email">Email *</label>
-                              <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
-                              <div class="help-block with-errors"></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row contact-row">
-                      <div class="col-md-12">
-                          <input type="submit" class="btn btn-success btn-send sign-up" value="Send Message">
-                      </div>
-                  </div>
-                  <div class="row contact-row">
-                      <div class="col-md-12">
-                          <a href="https://linkedin.com/in/jonas-albaira" class="btn btn-success btn-send sign-up" >Follow me on LinkedIn</a>
-                      </div>
-                  </div>
-                  <div class="row contact-row">
-                      <div class="col-md-12">
-                          <button type="submit" class="btn btn-success btn-send sign-up google" target="_blank" ><img src="https://img.icons8.com/nolan/64/000000/gmail.png" width=28/>&nbsp;&nbsp;Sign Up with Google</button>
-                      </div>
-                  </div>   
-              </div>       
-          </form>
-          </div>
-      </div>
-      <div class="col-md-6 featured half ">
-        <div class="row top-buffer" >
-          <p class="section-header">Featured Story</p>
-        </div>
-        <div class="row top-buffer">
-          <img class="project-featured large" src="<%= document.data.image.url %>"/>
-            <div class="category-featured">
-              <p><%= PrismicDOM.RichText.asText(document.data.category) %></p>
-            </div>   
-            <div class="title-featured underline">               
-                <a href="/article/<%= (document.uid) ?  document.uid  : '' %>"><%= PrismicDOM.RichText.asText(document.data.title) %></a>
-            </div>        
+    <div id="fullpage">
+    <section class="section first">
+     <div class="container">
+       <div class="row">
+         <div class="col-10 mx-auto">
+           <h1 class="text-center" style="color:#fff!important;font-size:3em!important;"><strong>Technology led creatives, inspired by culture, driven by insights.</strong></h1>
+         </div>
         </div>
       </div>
-      
-    </div>
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      
-      <!-- Overlay content -->
-      <div class="overlay-content">
-          <header>
-              <% include partials/menu %>
-          </header>
-        <div class="row top-buffer">
-          <div class="col-md-12">
-            <div class="category-featured " id="cat-feat">
+    </section>
+    <section class="section second ">
+      <div class="container-fluid">
+   
+        <div class="row d-flex justify-content-center">
+          
+          <div class="col-md-4 is-animated my-auto animated fadeInDown  ">
+            <h2>Harness Pixel</h2>
+              <p>Designed to help users retrieve reviews for a specific item or product.</p>
+              <ul class='pp-tech-list'>
+                <li>UI Design</li>
+                <li>Fullstack Development</li>
+                <li>Node JS</li>
+                <li>Express</li>
+                <li>ES6</li>
+                <li>Heroku</li>
+              </ul>
               
-            </div>   
-            <div class="title-featured"> 
-              <%= PrismicDOM.RichText.asText(document.data.title) %>
-            </div>
-            <img class="project-featured" src="<%= document.data.image.url %>"/>
+              <a href='https://nameless-plateau-58665.herokuapp.com/'>Visit Site</a>
           </div>
-          <div class="row top-buffer">
-            <div class="col-md-2"></div>
-            <div class="col-md-8" style="padding-top:0px!important;">
-                <span class="article-body"><%- PrismicDOM.RichText.asHtml(document.data.description) %></span>
-            </div>
-            <div class="col-md-2"></div>
+        <div class="col-md-6  ">
+           <!-- <img class="img-responsive mw-100 w-100" src="./images/bill-nye-landing.png">-->
           </div>
-        </div>
-      </div>  
-    </div>
-  <!-- end container -->
-  </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+    <section class="section third">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+           <!-- <img class="img-responsive mw-100 w-100" src="./images/bill-nye-landing.png"> -->
+          </div>
+          <div class="col-md-4 my-auto">
+                        <h2>Bill Nye at OTSU</h2>
+              <p>" The Ontario Tech Student Union fought tirelessly to host this event on campus to bring Bill’s insights on the future of science to you! "</p>
+              <p><em>with Jen & Sebbasteann</em></p>
+              <ul class='pp-tech-list'>
+                <li>UI Design</li>
+                <li>Wordpress Development</li>
+                  <li>Vanilla JS</li>
+                  <li>CSS</li>
+                <li>HTML</li>
+                <li>Eventbrite API, Eva Icons API</li>
+                <li>Responsive</li>
+              </ul>
+              
+              <a href='https://billnye.otsu.ca/'>Explore</a>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+    <section class="section fourth">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+   <div class="col-md-4 my-auto">
+                        <h2>Imbue Spark</h2>
+              <p>An excellent way for people to keep a quick schedule of their activities.</p>
+	      <p><em>thanks to Ai for the name &#x270C;</em></p>
+              <ul class='pp-tech-list'>
+                <li>Web Application</li>
+                <li>Fullstack Development</li>
+                  <li>Google Calendar API, Amazon S3</li>
+                  <li>NodeJS</li>
+                <li>Express</li>
+                <li>CSS3 Animations</li>
+                <li>Digital Ocean</li>
+              </ul>
+              
+              <a href='https://yeahdatsme-scheduling.herokuapp.com/'>Explore</a>
+          </div>         
+          <div class="col-md-6">
+           <!-- <img class="img-responsive mw-100 w-100" src="./images/bill-nye-landing.png"> -->
+          </div>
+          
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+    <section class="section fifth">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+           <!-- <img class="img-responsive mw-100 w-100" src="./images/bill-nye-landing.png"> -->
+          </div>
+          <div class="col-md-4 my-auto">
+                        <h2>O-Week at Ontario Tech U</h2>
+              <p>O-week is The Ultimate Campus Experience to kickstart your life as a university student.</p>
+              <p><em>with Jen, Sebbastean + Jess for the stage shots &#128076;</em></p>
+              <ul class='pp-tech-list'>
+                <li>UI Design</li>
+                <li>Wordpress Development</li>
+                  <li>Vanilla JS</li>
+                  <li>jQuery</li>
+                <li>HTML</li>
+                <li>Responsive</li>
+              </ul>
+              
+              <a href='https://oweek.otsu.ca'>Explore</a>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+        <section class="section fourth">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+   <div class="col-md-4 my-auto">
+                        <h2>Crescent Sea Resort</h2>
+              <p>CSR highlights a simple booking option for future visitors</p>
+              
+              <ul class='pp-tech-list'>
+                <li>Wordpress Development</li>
+                  <li>Woocommerce</li>
+                  <li>PHP</li>
+                <li>MySQL</li>
+                <li>Digital Ocean</li>
+              </ul>
+              
+              <a href='http://crescentsearesort.com'>Explore</a>
+          </div>         
+          <div class="col-md-6">
+           <!-- <img class="img-responsive mw-100 w-100" src="./images/bill-nye-landing.png"> -->
+          </div>
+          
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+    
+    <section class="section fifth">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-6">
+           <!-- <img class="img-responsive mw-100 w-100" src="./images/bill-nye-landing.png"> -->
+          </div>
+          <div class="col-md-4 my-auto">
+                        <h2>Leus Digital</h2>
+              <p>They'll set up, run and optimize your Facebook Ad campaigns &#128378;</p>
+              <p><em>ft. Carlos</em></p>
+              <ul class='pp-tech-list'>
+                <li>Facebook Ads</li>
+                <li>Ad Creative Design</li>
+                  <li>Landing Page Design</li>
+              </ul>
+              
+              <a href='https://leusdigital.com'>Explore</a>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </section>
+        <section class="section sixth">
+            <div class="row section-articles top-buffer row-eq-height section">
+                <div class="row top-buffer">
+                    <p class="section-header">Articles</p>
+                </div>
+
+                <% if (document2.length > 0) {%>
+                    <% document2.slice(-3).forEach((document2, index) => { %>
+                    <div class="col-sm-4 article">
+                        <div class="project-header">
+                            <img class="project-featured" src="<%=(document2.data.image.url) %>"/>
+                            <div class="project-date-latest">
+
+                            </div>
+                            <div class="project-title-latest underline">
+                                <a href="/article/<%= (document2.uid) ?  document2.uid  : '' %>"><%= PrismicDOM.RichText.asText(document2.data.title) %></a>
+                            </div>
+                            <div class="category-featured">
+                                <p><%= PrismicDOM.RichText.asText(document2.data.category) %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                <% } %>
+
+            </div>
+        </section>
+</div>
 <!-- SPOTIFY PLAYLIST -->
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script>
+  
 
-    window.sr = new ScrollReveal({ duration: 2000 });
-    sr.reveal('.reveal');
-
-    /* Open when someone clicks on the span element */
-    function openNav() {
-      document.getElementById("myNav").style.width = "100%";
-
+    <% include partials/script %>
+    <script>
+new fullpage('#fullpage', {
+	//options here
+    licenseKey:'5256FF70-2D4F4E0A-8CA292CD-ED744BD8',
+    navigation: true,
+	autoScrolling:true,
+	scrollHorizontally: true,
+    sectionsColor:["#282423",'#e3c4c3','#db8c6c','#db8c6c'],
+    easing: 'easeInOutCubic',
+	easingcss3: 'ease',
+    scrollOverflow:'true'
+});
+    fullpage_api.reBuild();
+fullpage_api.setAllowScrolling(true);
+eva.replace({
+  animation: {
+    type: 'string', // zoom, pulse, shake, flip
+    hover: 'boolean', // default true
+    infinite: 'boolean', // default false
+  }
+});
+    new WOW().init();
       
-    }
-
-    /* Close when someone clicks on the "x" symbol inside the overlay */
-    function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
-      
-    }
-
-</script>
-<script>
-
 </script>
 </body>
-<% include partials/script %>
 </html>
