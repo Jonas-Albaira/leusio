@@ -166,9 +166,10 @@
         <section class="section sixth">
             <div class="row section-articles top-buffer row-eq-height section">
                 <div class="row top-buffer">
-                    <p class="section-header">Articles</p>
+                    <h2 class="section-header">Articles</h2>
                 </div>
-
+                <div class="row">
+                    <div class="col">
                 <% if (document2.length > 0) {%>
                     <% document2.slice(-3).forEach((document2, index) => { %>
                     <div class="col-sm-4 article">
@@ -187,7 +188,8 @@
                     </div>
                     <% }) %>
                 <% } %>
-
+                    </div>
+                </div>
             </div>
         </section>
 </div>
